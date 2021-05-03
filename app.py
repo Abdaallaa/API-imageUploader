@@ -22,6 +22,10 @@ class UploadImage(Resource):
     #  imagePreProcess(image_file.filename)
      return "all is ok by now"
 
+class SayHello(Resource):
+  def get(self):
+    return "Hello"
 
+api.add_resource(SayHello,'/')
 api.add_resource(UploadImage,'/uploadImage')
 app.run(port=5000,debug=False)
