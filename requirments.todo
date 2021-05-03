@@ -1,0 +1,6 @@
+requirments:
+    ☐ detect rows or columns (based on horizontal and vertical lines) 
+    ☐ split them and apply the segmentation process (list<row/columns> segmented images) 
+    ☐ detection of symbols directions then sort the above list  
+    ☐ return one list of the sorted symbols
+

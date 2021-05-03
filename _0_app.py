@@ -2,6 +2,7 @@ from flask import Flask, request, Response
 # from werkzeug.utils import secure_filename
 from flask_restful import Resource , reqparse ,Api
 import werkzeug
+# from imageProcessing import imagePreProcess
 
 app = Flask(__name__)
 api = Api(app)
@@ -17,9 +18,9 @@ class UploadImage(Resource):
      parse.add_argument('image', type=werkzeug.datastructures.FileStorage, location='files')
      args = parse.parse_args()
      image_file = args['image']
-    #  image_file.save("your_file_name.jpg")
+     image_file.save(image_file.filename)
+    #  imagePreProcess(image_file.filename)
      return "all is ok by now"
-     #image_file.filename
 
 
 api.add_resource(UploadImage,'/uploadImage')
