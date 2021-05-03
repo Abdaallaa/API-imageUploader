@@ -24,4 +24,4 @@ class UploadImage(Resource):
 
 
 api.add_resource(UploadImage,'/uploadImage')
-app.run(port=5000,debug=True)
+app.run(port=5000,debug=False)
