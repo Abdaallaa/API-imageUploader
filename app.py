@@ -28,4 +28,4 @@ class SayHello(Resource):
 
 api.add_resource(SayHello,'/')
 api.add_resource(UploadImage,'/uploadImage')
-app.run(port=5000,debug=False)
+app.run(port=5000)
